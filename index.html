@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xander van der Meer</title>
+    <link rel="icon" type="image/x-icon" href="images/test.png">
+    <style>
+        :root {
+            --primary-color: #C1121F;
+            --secondary-color: #e24e58;
+            --tertiary-color: #feb47b;
+            --background-color: #111315;
+            --background-secondary-color: #1A1D21;
+            --text-color: #F5F7FA; 
+            
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            color: var(--text-color)
+        }
+
+        /**HEADER ------------------------------------------------------------------- **/
+        #header {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-bottom: 4px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        #header a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 3px solid var(--secondary-color);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        #header a:hover {
+            border-bottom: 3px solid var(--tertiary-color);
+        }
+
+        #header a .hd-active{
+            cursor: default;
+        }
+
+        #hd-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #hd-title img {
+            width: 96px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+        }
+
+        /**MAIN ------------------------------------------------------------------- **/
+        #main {
+            background-color: var(--background-color);
+            padding: 20px;
+            justify-content: center;
+        }
+
+        #title-1 {
+            background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #profile {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        #profile-title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #profile img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+        }
+
+        .item {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            width: 95%;
+            margin: 10px auto;
+        }
+
+        /**PROJECTEN ------------------------------------------------------------------- **/
+        .project {
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .project img {
+            height: 48px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .project-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /**ERVARING ------------------------------------------------------------------- **/
+        .ervaring {
+            align-items: center;
+            gap: 20px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .ervaring img {
+            height: 48px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .ervaring-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /**ANIMATIES ------------------------------------------------------------------- **/
+        .animation {
+            opacity: 0;
+            transform: translateY(40px); 
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animation.in-beeld {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animation-top.in-beeld {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animation-top {
+            opacity: 0;
+            transform: translateY(-40px); 
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /**VAARDIGHEDEN ------------------------------------------------------------------- **/
+
+
+        /**FOOTER ------------------------------------------------------------------- **/
+        #footer {
+            background-color: var(--primary-color);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .f-content {
+            padding: 20px;
+            border-radius: 10px;
+            width: 20%;
+            min-width: 150px;
+            height: 200px;
+        }
+
+        .f-txt {
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .f-content img {
+            height: 24px;
+            width: auto;
+        }
+
+        .f-content a div{
+            color: var(--text-color);
+            text-decoration: none;
+            background-color: var(--secondary-color);
+            padding: 5px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="hd-title">
+            <img src="images/me.png">
+            <h1>Xander van der Meer</h1>
+        </div>
+        <a href="" class="hd-active">About me</a>
+        <a href="contact.html" class="">Contact</a>
+    </div>
+    <div id="main">
+        <div id="profile" class="item">
+            <div id="profile-title">
+                <h2 style="font-size: 96px; margin: 0; width: 75%;">Werken aan een <br><span id="title-1" style="font-size: 128px;">efficiente toekomst</span></h2>
+                <img src="images/me.png">
+            </div>
+            <p>Hallo, ik ben Xander! Ik ben 16 jaar oud en kom uit de omgeving Tilburg. Ik ben blij dat je een bezoek pleegt aan mijn website!</p>
+            <p>Ik zal me even kort voorstellen: Ik ben een 16 jarige leerling op het Odulphus Lyceum in tilburg. Ik zit op dit moment in vwo 5 en droom ervan om piloot te worden bij de koninklijke luchtmacht. Dit is wat mij de laatste jaren heeft gemotiveerd om extra inzet te tonen op school waardoor mijn prestaties ook echt zijn gestegen.  </p>
+            <p>Naast mijn enorme hobby voor vliegtuigen vindt ik het ook leuk om code te leren en schhrijven, zoals deze website. Ik ben echter niet van plan om hier mijn baan van te maken, dit is een hobby.</p>
+        </div>
+        <div id="Projecten" class="item">
+            <h2>Projecten</h2>
+            <div class="project animation">
+                <div class="project-title">
+                    <img src="images/jumbo.png" alt="Jumbo Supermarkten">
+                    <h3>Jumbo Vision</h3>
+                </div>
+                <p>Dit kan je zien als mijn "meesterwerk". Ik heb deze website ontwikkeld in 2 weken tijd in mijn vrijetijd, omdat ik zag dat wij in onze Jumbo een slecht lopende app hadden en er een groot gat zat in customer service.<br>Het mooie aan deze website is dat hij niet eens ingewikkeld is, ja er zit tijd en moeite achter, maar nee deze website is niet ingewikkeld om te maken. En dit is mooi want dit betekend dat we wereld veel potentie laat liggen bij het denk werk achter een website. <br>Wil je dit project nou met je eigen ogen zien? Bekijk dan <a href="">hier</a> het project</p>
+                <p>05/2026 - heden</p>
+             </div>
+             <div class="project animation">
+                <div class="project-title">
+                    <img src="images/odulphus.png" alt="Jumbo Supermarkten">
+                    <h3>International Science School Fair (ISSF)</h3>
+                </div>
+                <p>Vanuit mijn middelbare school heb ik voor mijn Profielwerkstuk (PWS) mogen samenwerken met de absolute topstudenten van de Korea Science Academy of KAIST (KSA).</p>
+                <p>Voor wie deze school niet kent: KSA staat wereldwijd bekend als een van de meest prestigieuze en selectieve science-middelbare scholen op deze planeet. Het is een officiële kweekvijver voor bètatalent, direct gekoppeld aan KAIST (de top-techuniversiteit van Zuid-Korea). De studenten die hier worden toegelaten behoren tot de absolute wereldtop op het gebied van wiskunde, science en technologie.</p>
+                <p>Dit project is nu nog in opstartende fase.</p>
+                <p>04/2026 - heden</p>
+             </div>
+        </div>
+        <div id="Ervaring" class="item">
+            <h2>Ervaring</h2>
+            <div class="ervaring animation">
+                <div class="ervaring-title">
+                    <img src="images/jumbo.png" alt="Jumbo Supermarkten">
+                    <h3>Jumbo supermarkten</h3>
+                </div>
+                <p>Ik werk al 2 jaar bij Jumbo Supermarkten, ik heb sinds kort een enorme uitbreiding gehad van mijn takenpakket en verantwoordelijkheden. Het belangrijkste van deze verantwoordelijkheden is dat ik nu bestellingen doe op de zaterdag voor de agf afdeling. Dit geeft mij enorm veel inzicht en denkvermogen onder tijdsdruk, omdat er een hoop besteld moet worden in een korte tijd. Ik neem deze verantwoordelijkheid met vertrouwen op, omdat ik goed weet wat ik doe en daardoor weet dat de kans op fouten klein is.</p>
+                <ul>
+                    <li>Inzicht</li>
+                    <li>Denk vermogen onder tijdsstress</li>
+                    <li>Problemen oplossen</li>
+                    <li>Verantwoordelijkheid</li>
+                    <li>Klanttevreden denken</li>
+                </ul>
+                <p>11/05/2024 - heden</p>
+             </div>
+             <div class="ervaring animation">
+                <div class="ervaring-title">
+                    <img src="images/odulphus.png" alt="Odulphus Lyceum">
+                    <h3>Odulphus Lyceum</h3>
+                </div>
+                <p>Ik ben een 16 jarige leerling op het Odulphus Lyceum in Tilburg. Ik zit op dit moment in vwo 5.</p>
+                <p>06/09/2021 - heden</p>
+             </div>
+        </div>
+        <div id="vaardigheden" class="item">
+            <h2>Vaardigheden</h2>
+            <div class="ervaring">
+                <h3>Programmeren</h3>
+                Programmeren is iets dat ik in mijn vrije tijd als hobby doe. Ik maak soms ook opdrachten voor school, maar deze zijn vaak minder uitgebreid dan wat ik thuis maak. Ik ben vooral bezig met web development, maar ik heb ook ervaring met python. Mijn vaardigheden zijn als volgt:
+                <ul>
+                    <li>Html en css: basis webpaginas bouwen</li>
+                    <li>Javascript: webpaginas functioneel maken inclusief backend code</li>
+                    <li>Python: Automatisering</li>
+                    <li>Waar werk ik nog aan: Het veilig maken van mijn javascript code (denk aan dingen als DDos protectie) en geadvanceerde python (verder dan alleen basis automatisering)</li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="f-content">
+            <span class="f-txt" id="f-copyright">© Xander van der Meer 2026</span>
+        </div>
+        <div class="f-content">
+            <span class="f-txt" id="f-socials">Socials</span>
+            <a href="https://www.instagram.com/" target="_blank"><div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1280px-Instagram_logo_2016.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail">
+                <span>Instagram</span>
+            </div></a>
+            <a href="https://www.linkedin.com/" target="_blank"><div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original">
+                <span>Linkedin</span>
+            </div></a>
+        </div>
+        <div class="f-content">
+            <span class="f-txt" id="f-other-pages">Mijn andere webpaginas</span>
+        </div>
+        <div class="f-content">
+            <span class="f-txt" id="f-contact">Contact</span>
+        </div>
+    </div>
+    <script src="animate.js"></script>
+</body>
+</html>
