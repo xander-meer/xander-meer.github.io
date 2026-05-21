@@ -217,6 +217,10 @@ html, body {
     width: auto;
 }
 
+.f-content a {
+    text-decoration: none;
+}
+
 .f-content a div{
     color: var(--text-color);
     text-decoration: none;
