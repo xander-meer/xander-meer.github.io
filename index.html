@@ -80,6 +80,12 @@
             -webkit-text-fill-color: transparent;
         }
 
+        #title-2 {
+            font-size: 128px;
+            margin: 0; 
+            width: 60%;
+        }
+
         #profile {
             display: flex;
             flex-direction: column;
@@ -99,6 +105,20 @@
             border-radius: 50%;
             padding: 3px;
             background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+        }
+
+        @media (max-width: 600px) {
+            #title-2 {
+                font-size: 84px;
+                width: 100%;
+            }
+            #title-1 {
+                font-size: 96px;
+            }
+            
+            #hd-title h1 {
+                font-size: 24px;
+            }
         }
 
         .item {
@@ -213,6 +233,11 @@
             border-radius: 10px;
             margin: 5px;
         }
+
+        /**GENERAL DESIGN ------------------------------------------------------------------- **/
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -221,13 +246,13 @@
             <img src="images/me.png">
             <h1>Xander van der Meer</h1>
         </div>
-        <a href="" class="hd-active">About me</a>
-        <a href="contact.html" class="">Contact</a>
+        <a href="" class="hd-active hidden">About me</a>
+        <a href="contact.html" class="hidden">Contact</a>
     </div>
     <div id="main">
         <div id="profile" class="item">
             <div id="profile-title">
-                <h2 style="font-size: 96px; margin: 0; width: 75%;">Werken aan een <br><span id="title-1" style="font-size: 128px;">efficiente toekomst</span></h2>
+                <h2 id="title-2">Werken aan een <br><span id="title-1">efficiente toekomst</span></h2>
                 <img src="images/me.png">
             </div>
             <p>Hallo, ik ben Xander! Ik ben 16 jaar oud en kom uit de omgeving Tilburg. Ik ben blij dat je een bezoek pleegt aan mijn website!</p>
@@ -241,7 +266,7 @@
                     <img src="images/jumbo.png" alt="Jumbo Supermarkten">
                     <h3>Jumbo Vision</h3>
                 </div>
-                <p>Dit kan je zien als mijn "meesterwerk". Ik heb deze website ontwikkeld in 2 weken tijd in mijn vrijetijd, omdat ik zag dat wij in onze Jumbo een slecht lopende app hadden en er een groot gat zat in customer service.<br>Het mooie aan deze website is dat hij niet eens ingewikkeld is, ja er zit tijd en moeite achter, maar nee deze website is niet ingewikkeld om te maken. En dit is mooi want dit betekend dat we wereld veel potentie laat liggen bij het denk werk achter een website. <br>Wil je dit project nou met je eigen ogen zien? Bekijk dan <a href="">hier</a> het project</p>
+                <p>Dit kan je zien als mijn "meesterwerk". Ik heb deze website ontwikkeld in 2 weken tijd in mijn vrijetijd, omdat ik zag dat wij in onze Jumbo een slecht lopende app hadden en er een groot gat zat in customer service.<br>Het mooie aan deze website is dat hij niet eens ingewikkeld is, ja er zit tijd en moeite achter, maar nee deze website is niet ingewikkeld om te maken. En dit is mooi want dit betekend dat we wereld veel potentie laat liggen bij het denk werk achter een website. <br>Wil je dit project nou met je eigen ogen zien? Bekijk dan <a target="_blank" href="https://xander.plumbusx.nl/">hier</a> het project</p>
                 <p>05/2026 - heden</p>
              </div>
              <div class="project animation">
@@ -301,20 +326,28 @@
         </div>
         <div class="f-content">
             <span class="f-txt" id="f-socials">Socials</span>
-            <a href="https://www.instagram.com/" target="_blank"><div>
+            <a href="https://www.instagram.com/xander_519/" target="_blank"><div>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1280px-Instagram_logo_2016.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail">
                 <span>Instagram</span>
             </div></a>
-            <a href="https://www.linkedin.com/" target="_blank"><div>
+            <a href="https://www.linkedin.com/in/xander-meer-4b460334b/" target="_blank"><div>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original">
                 <span>Linkedin</span>
             </div></a>
         </div>
         <div class="f-content">
             <span class="f-txt" id="f-other-pages">Mijn andere webpaginas</span>
+            <a href="https://xander.plumbusx.nl/" target="_blank"><div>
+                <img src="images/jumbo.png">
+                <span>Jumbo Vision</span>
+            </div></a>
         </div>
         <div class="f-content">
             <span class="f-txt" id="f-contact">Contact</span>
+            <a><div>
+                <span>Komt binnenkort! Gebruik voor nu mijn socials.</span>
+            </div></a>
+            
         </div>
     </div>
     <script src="animate.js"></script>
